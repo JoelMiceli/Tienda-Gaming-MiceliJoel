@@ -106,13 +106,6 @@ font-size: large;
     font-size: large;
 }
 
-.productosXbox, .productosPs, .productosNintendo {
-    display: flex;
-    justify-content: center;
-    background-color: grey;
-    color: black;
-}
-
 .margenProducto {
     margin-top: 5%;
     margin-bottom: 5%;
@@ -125,16 +118,6 @@ font-size: large;
     margin-inline-start: 0%;
     margin-top: 2%;
     }
-
- .juegosXbox, .juegosNtd, #juegosNtd {
-    display: flex;
-    align-content:center;
-    align-items:center;
-    flex-direction: row;
-    justify-content: space-evenly;
-    gap: 2%;
-    flex-wrap: wrap;
-}
 
 .linkCuenta, .linkCarro{
     color: black; 
@@ -166,13 +149,13 @@ footer {
 
     /* GRID*/
 
-    #grillaProductos {
+    #grillaProductos, #juegosXbox, #juegosPs, #juegosNtd {
         display: grid;
         grid-template-columns: repeat(3, auto);
         grid-template-rows: repeat (3, auto);
         justify-content: center;
         align-content: center;
-        gap: 5%
+        gap: 10%
     }
 
     header {
@@ -198,11 +181,7 @@ footer {
         grid-area: aside;
         margin-left: 5%;
     }
-
-    #juegosPs, #juegosXbox, #juegosNtd {
-        display: grid;
-    }
-    
+   
     #menuNavegacion{
       background: rgb(128,1,1);
       background: linear-gradient(90deg, rgba(128,1,1,1) 0%, rgba(250,1,1,0.8664508039543942) 50%, rgba(128,1,1,1) 100%) 
@@ -253,9 +232,13 @@ footer {
             margin-bottom: 30%;
         }
 
+        #grillaProductos{
+            margin-bottom: 25%;
+        }
+
         #juegosPs, #juegosXbox, #juegosNtd {
             margin-top: 35%;
-            margin-bottom: 35%
+            margin-bottom: 40%
         }
         .margenProducto {
             display: flex;
@@ -314,8 +297,9 @@ footer {
             grid-template-rows: repeat (3, auto);
             justify-content: center;
             align-content:flex-start;
-            row-gap: 2%;
-            column-gap: 2%;
+            row-gap: 5%;
+            column-gap: 5%;
+            margin-bottom: 15%;
         }
 
         footer {
