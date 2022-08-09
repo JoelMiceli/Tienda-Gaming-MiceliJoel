@@ -32,15 +32,6 @@ nav div p {
     font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-.displayProductos {
-    display: flex;
-    flex-direction: column;
-    flex-wrap:nowrap;
-    justify-content:space-around;
-    align-content:center;
-    align-items:center;
-}
-
 #menuNavegacion {
     display: flex;
     margin-top: 0%;
@@ -69,18 +60,6 @@ h2 {
 .bannerNintendo, .bannerXbox {
     display: flex;
     width: 65%;
-}
-
-.botonConfirmar {
-    margin-top: 2%;
-}
-
-.estiloTablaCarro {
-    display: flex;
-    align-content:center;
-    flex-direction: column;
-    font-style: initial;
-    font-size: large;
 }
 
 #compraJuego{
@@ -141,12 +120,7 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-around;
     }
-
-    .contact-link {
-        text-decoration: none;
-        color: white
-    }
-
+    
     /* GRID*/
 
     #grillaProductos, #juegosXbox, #juegosPs, #juegosNtd {
@@ -191,15 +165,15 @@ footer {
         background-color: darkgrey;
     }
 
-    .pestañaPS {
+    .pestanaPS {
         background: rgb(230,225,244);
         background: radial-gradient(circle, rgba(230,225,244,1) 0%, rgba(32,126,236,1) 100%);
     }
-    .pestañaXbx {
+    .pestanaXbx {
         background: rgb(169,237,214);
         background: radial-gradient(circle, rgba(169,237,214,1) 0%, rgba(34,195,27,1) 100%);
     }
-    .pestañaNtd {
+    .pestanaNtd {
         background: rgb(231,149,149);
         background: radial-gradient(circle, rgba(231,149,149,1) 0%, rgba(226,37,37,1) 100%);  
     }
@@ -223,13 +197,8 @@ footer {
         nav{
             margin-top: 5%;
         }
-        .cuenta-carro, .masVendidosNtd, .aside, .margenPagos, .margenUbicacion, .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
+        .cuenta-carro, .aside, .margenPagos, .margenUbicacion, .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
             display: none;
-        }
-        
-         .productosNintendo {
-            margin-top: 2%;
-            margin-bottom: 30%;
         }
 
         #grillaProductos{
@@ -272,7 +241,7 @@ footer {
         nav{
             margin-top: 5%;
         }
-        .cuenta-carro, .masVendidosNtd, .margenPagos{
+        .cuenta-carro, .margenPagos{
             display: none;
         }
         .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
