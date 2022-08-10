@@ -1,283 +1,306 @@
-@import url('https://fonts.googleapis.com/css2?family=Arima&family=Bitter:wght@300&family=PT+Sans+Narrow&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Arima&family=Bitter:wght@300&family=PT+Sans+Narrow&display=swap");
 /*Estilo de fuente usada para el footer y la barra superior con la promocion de cuotas y envio*/
 
-* {
-    margin: 0;
-    padding: 0;
+/* GRID*/
+#grillaProductos, #juegosXbox, #juegosPs, #juegosNtd {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat 3, auto;
+  justify-content: center;
+  align-content: center;
+  gap: 10%;
 }
 
-/*Estilos del body*/
-body {
-    background-image: url('../Images/index-background.jpg');
-    background-size: cover;
+header {
+  grid-area: header;
 }
+
+footer {
+  grid-area: footer;
+}
+
+section {
+  grid-area: section;
+  margin-top: 2%;
+}
+
+nav {
+  grid-area: nav;
+  margin-top: 5%;
+}
+
+aside {
+  grid-area: aside;
+  margin-left: 5%;
+}
+
+/*MEDIAS*/
+@media screen and (min-width: 320px) and (max-width: 480px) and (min-width: 320px) and (max-width: 480px) {
+  #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
+    grid-template-columns: auto;
+    grid-template-rows: repeat 3, auto;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1%;
+    -moz-column-gap: 2%;
+         column-gap: 2%;
+  }
+  footer {
+    display: flex;
+    margin-top: 20%;
+    height: 8%;
+  }
+  nav {
+    margin-top: 5%;
+  }
+  .cuenta-carro, .aside, .margenPagos, .margenUbicacion, .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
+    display: none;
+  }
+  #grillaProductos {
+    margin-bottom: 25%;
+  }
+  #juegosPs, #juegosXbox, #juegosNtd {
+    margin-top: 35%;
+    margin-bottom: 40%;
+  }
+  .margenProducto {
+    display: flex;
+    margin-bottom: 25%;
+    justify-content: center;
+  }
+  .bannerNintendo, .bannerXbox {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1024px) {
+  #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
+    grid-template-columns: auto auto;
+    grid-template-rows: repeat 3, auto;
+    justify-content: center;
+    align-content: center;
+    row-gap: 1%;
+    -moz-column-gap: 2%;
+         column-gap: 2%;
+    margin-top: 15%;
+  }
+  footer {
+    display: flex;
+    margin-top: 20%;
+    height: 8%;
+  }
+  nav {
+    margin-top: 5%;
+  }
+  .cuenta-carro, .margenPagos {
+    display: none;
+  }
+  .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
+    margin-top: 5%;
+  }
+  .margenProducto {
+    display: flex;
+    margin-bottom: 25%;
+    justify-content: center;
+  }
+  .bannerNintendo, .bannerXbox {
+    display: flex;
+    width: 100%;
+  }
+}
+@media screen and (min-width: 1200px) {
+  #juegosPs, #juegosXbox, #juegosNtd {
+    grid-template-columns: repeat(3, auto);
+    grid-template-rows: repeat 3, auto;
+    justify-content: center;
+    align-content: flex-start;
+    row-gap: 5%;
+    column-gap: 5%;
+    margin-bottom: 15%;
+  }
+  footer {
+    margin-top: 10%;
+  }
+  .card {
+    transition: all 2s;
+  }
+  .card:hover {
+    transform: scale(1.2);
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/*Estilos del header y main*/
+body {
+  background-image: url("../Images/index-background.jpg");
+  background-size: cover;
+}
+
 nav div p {
-    font-family: 'Arima', cursive;
-    font-family: 'Bitter', serif;
-    font-family: 'PT Sans Narrow', sans-serif; 
+  font-family: "Arima", cursive;
+  font-family: "Bitter", serif;
+  font-family: "PT Sans Narrow", sans-serif;
 }
 
 .barraCuotas {
-    background: rgb(128,1,1);
-    background: linear-gradient(90deg, rgba(128,1,1,1) 0%, rgba(250,1,1,0.8664508039543942) 50%, rgba(128,1,1,1) 100%) ;
-    text-align: center;
-    color: whitesmoke;
+  background: rgb(128, 1, 1);
+  background: linear-gradient(90deg, rgb(128, 1, 1) 0%, rgba(250, 1, 1, 0.866450804) 50%, rgb(128, 1, 1) 100%);
+  text-align: center;
+  color: whitesmoke;
 }
 
 .margenProducto {
-    text-align: center;
-    font-size: large;
-    font-weight: bolder;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+  text-align: center;
+  font-size: large;
+  font-weight: bolder;
+  font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #menuNavegacion {
-    display: flex;
-    margin-top: 0%;
+  display: flex;
+  margin-top: 0%;
+  background: rgb(128, 1, 1);
+  background: linear-gradient(90deg, rgb(128, 1, 1) 0%, rgba(250, 1, 1, 0.866450804) 50%, rgb(128, 1, 1) 100%);
 }
 
 #menuCategorias {
-    margin-top: 2%;
+  margin-top: 2%;
 }
 
 li {
-    display:inline-block;
-    position: relative;
-    margin-inline: 10px;
+  display: inline-block;
+  position: relative;
+  margin-inline: 10px;
 }
 
 h2 {
-    text-align: center;
+  text-align: center;
 }
 
 .cuenta-carro {
-    display: flex;
-    flex-direction: row;
-    justify-content: end;
+  display: flex;
+  flex-direction: row;
+  justify-content: end;
 }
 
-.bannerNintendo, .bannerXbox {
-    display: flex;
-    width: 65%;
+.bannerNintendo {
+  display: flex;
+  width: 65%;
 }
 
-#compraJuego{
-    margin-top: 2%;
-    margin-left: 11%;
+.bannerXbox {
+  display: flex;
+  width: 65%;
 }
 
-#formularioCuenta, #formularioCarro, #formularioCarroTarjeta {
-margin-top: 5%;
-margin-inline: 10%;
-border-radius: 2%;
-font-style: italic;
-font-size: large;
+#compraJuego {
+  margin-top: 2%;
+  margin-left: 11%;
 }
 
+#formularioCuenta {
+  margin-top: 5%;
+  margin-inline: 10%;
+  border-radius: 2%;
+  font-style: italic;
+  font-size: large;
+}
 
-.formularioCarroTarjeta {
-    display: flex;
-    flex-direction: column;
-    border-color: black;
-    border-radius: 5px;
-    font-style: italic;
-    font-size: large;
+#formularioCarro {
+  margin-top: 5%;
+  margin-inline: 10%;
+  border-radius: 2%;
+  font-style: italic;
+  font-size: large;
+}
+
+#formularioCarroTarjeta {
+  margin-top: 5%;
+  margin-inline: 10%;
+  border-radius: 2%;
+  font-style: italic;
+  font-size: large;
 }
 
 .margenProducto {
-    margin-top: 5%;
-    margin-bottom: 5%;
+  margin-top: 5%;
+  margin-bottom: 5%;
 }
 
-.margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
-    display: flex;
-    flex-direction:column;
-    align-items:flex-start;
-    margin-inline-start: 0%;
-    margin-top: 2%;
-    }
+.margenFiltroXbox {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-inline-start: 0%;
+  margin-top: 2%;
+}
 
-.linkCuenta, .linkCarro{
-    color: black; 
-    text-decoration:none;
+.margenFiltroPs {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-inline-start: 0%;
+  margin-top: 2%;
+}
+
+.margenFiltroNintendo {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-inline-start: 0%;
+  margin-top: 2%;
+}
+
+.linkCuenta {
+  color: black;
+  text-decoration: none;
+}
+
+.linkCarro {
+  color: black;
+  text-decoration: none;
+}
+
+/*APLICACION DE &*/
+.d-flex button:hover {
+  background-color: darkgrey;
+}
+
+.pestanaPS {
+  background: rgb(230, 225, 244);
+  background: radial-gradient(circle, rgb(230, 225, 244) 0%, rgb(32, 126, 236) 100%);
+}
+
+.pestanaXbx {
+  background: rgb(169, 237, 214);
+  background: radial-gradient(circle, rgb(169, 237, 214) 0%, rgb(34, 195, 27) 100%);
+}
+
+.pestanaNtd {
+  background: rgb(231, 149, 149);
+  background: radial-gradient(circle, rgb(231, 149, 149) 0%, rgb(226, 37, 37) 100%);
 }
 
 /*Estilos del footer*/
-
 #colorLetra {
-    color: white;
+  color: whitesmoke;
 }
 
+.contact-link {
+  text-decoration: none;
+  color: whitesmoke;
+}
 
 footer {
-    background: rgb(128,1,1);
-      background: linear-gradient(90deg, rgba(128,1,1,1) 0%, rgba(250,1,1,0.8664508039543942) 50%, rgba(128,1,1,1) 100%);
-    font-family: 'Arima', cursive;
-    font-family: 'Bitter', serif;
-    font-family: 'PT Sans Narrow', sans-serif;
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: space-around;
-    }
-    
-    /* GRID*/
-
-    #grillaProductos, #juegosXbox, #juegosPs, #juegosNtd {
-        display: grid;
-        grid-template-columns: repeat(3, auto);
-        grid-template-rows: repeat (3, auto);
-        justify-content: center;
-        align-content: center;
-        gap: 10%
-    }
-
-    header {
-        grid-area: header;
-    }
-    
-    footer {
-        grid-area: footer;
-    }
-    
-    section {
-        grid-area: section;
-        margin-top: 2%;
-    }
-
-    nav {
-        grid-area: nav;
-        margin-top: 5%;
-        
-    }
-      
-    aside {
-        grid-area: aside;
-        margin-left: 5%;
-    }
-   
-    #menuNavegacion{
-      background: rgb(128,1,1);
-      background: linear-gradient(90deg, rgba(128,1,1,1) 0%, rgba(250,1,1,0.8664508039543942) 50%, rgba(128,1,1,1) 100%) 
-    }
-
-    .d-flex button:hover {
-        background-color: darkgrey;
-    }
-
-    .pestanaPS {
-        background: rgb(230,225,244);
-        background: radial-gradient(circle, rgba(230,225,244,1) 0%, rgba(32,126,236,1) 100%);
-    }
-    .pestanaXbx {
-        background: rgb(169,237,214);
-        background: radial-gradient(circle, rgba(169,237,214,1) 0%, rgba(34,195,27,1) 100%);
-    }
-    .pestanaNtd {
-        background: rgb(231,149,149);
-        background: radial-gradient(circle, rgba(231,149,149,1) 0%, rgba(226,37,37,1) 100%);  
-    }
-    
-    @media screen and (min-width: 320px) and (max-width: 480px) {
-        #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
-            grid-template-columns: auto;
-            grid-template-rows: repeat (3, auto);
-            justify-content: center;
-            align-content: center;
-            row-gap: 1%;
-            column-gap: 2%;
-        }
-
-        footer {
-            display: flex;
-            margin-top: 20%;
-            height: 8%;
-        }
-
-        nav{
-            margin-top: 5%;
-        }
-        .cuenta-carro, .aside, .margenPagos, .margenUbicacion, .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
-            display: none;
-        }
-
-        #grillaProductos{
-            margin-bottom: 25%;
-        }
-
-        #juegosPs, #juegosXbox, #juegosNtd {
-            margin-top: 35%;
-            margin-bottom: 40%
-        }
-        .margenProducto {
-            display: flex;
-            margin-bottom: 25%;
-            justify-content: center;
-        }
-
-        .bannerNintendo, .bannerXbox {
-            display: flex;
-            width: 100%;
-        }
-    }
-
-    @media screen and (min-width: 481px) and (max-width: 1024px) {
-        #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
-            grid-template-columns: auto auto;
-            grid-template-rows: repeat (3, auto);
-            justify-content: center;
-            align-content: center;
-            row-gap: 1%;
-            column-gap: 2%;
-            margin-top: 15%;
-        }
-
-        footer {
-            display: flex;
-            margin-top: 20%;
-            height: 8%;
-        }
-
-        nav{
-            margin-top: 5%;
-        }
-        .cuenta-carro, .margenPagos{
-            display: none;
-        }
-        .margenFiltroXbox, .margenFiltroPs, .margenFiltroNintendo {
-            margin-top: 5%;
-        }
-
-        .margenProducto {
-            display: flex;
-            margin-bottom: 25%;
-            justify-content: center;
-        }
-
-        .bannerNintendo, .bannerXbox {
-            display: flex;
-            width: 100%;
-        }
-    }
-
-    @media screen and (min-width: 1200px) {
-        #juegosPs, #juegosXbox, #juegosNtd {
-            grid-template-columns: repeat(3, auto);
-            grid-template-rows: repeat (3, auto);
-            justify-content: center;
-            align-content:flex-start;
-            row-gap: 5%;
-            column-gap: 5%;
-            margin-bottom: 15%;
-        }
-
-        footer {
-            margin-top: 10%;
-        }
-
-        .card {
-            transition: all 2s
-           }
-           .card:hover {
-            transform: scale(1.2)}
-    }
+  background: rgb(128, 1, 1);
+  background: linear-gradient(90deg, rgb(128, 1, 1) 0%, rgba(250, 1, 1, 0.866450804) 50%, rgb(128, 1, 1) 100%);
+  font-family: "Arima", cursive;
+  font-family: "Bitter", serif;
+  font-family: "PT Sans Narrow", sans-serif;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+}/*# sourceMappingURL=styles.css.map */

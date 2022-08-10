@@ -1,0 +1,189 @@
+@import url('https://fonts.googleapis.com/css2?family=Arima&family=Bitter:wght@300&family=PT+Sans+Narrow&display=swap');
+/*Estilo de fuente usada para el footer y la barra superior con la promocion de cuotas y envio*/
+
+@import "variables";
+
+ /* GRID*/
+ @import "grillas";
+   
+ /*MEDIAS*/
+ @import "medias";
+ 
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilos del header y main*/
+
+body {
+    background-image: url('../Images/index-background.jpg');
+    background-size: cover;
+}
+    
+
+nav div p {
+    font-family: $estiloLetra1;
+    font-family: $estiloLetra2;
+    font-family: $estiloLetra3; 
+}
+
+.barraCuotas {
+    background: rgb(128,1,1);
+    background: $colorGradiente;
+    text-align: center;
+    color: $colorLetraFooter;
+}
+
+.margenProducto {
+    text-align: center;
+    font-size: large;
+    font-weight: bolder;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+#menuNavegacion {
+    display: flex;
+    margin-top: 0%;
+    background: rgb(128,1,1);
+    background: $colorGradiente;
+}
+
+#menuCategorias {
+    margin-top: 2%;
+}
+
+li {
+    display:inline-block;
+    position: relative;
+    margin-inline: 10px;
+}
+
+h2 {
+    text-align: center;
+}
+
+.cuenta-carro {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+}
+
+.bannerNintendo {
+	display: flex;
+	width: 65%;
+}
+.bannerXbox {
+	display: flex;
+	width: 65%;
+}
+
+#compraJuego{
+    margin-top: 2%;
+    margin-left: 11%;
+}
+
+
+#formularioCuenta {
+	margin-top: 5%;
+	margin-inline: 10%;
+	border-radius: 2%;
+	font-style: italic;
+	font-size: large;
+}
+#formularioCarro {
+	margin-top: 5%;
+	margin-inline: 10%;
+	border-radius: 2%;
+	font-style: italic;
+	font-size: large;
+}
+#formularioCarroTarjeta {
+	margin-top: 5%;
+	margin-inline: 10%;
+	border-radius: 2%;
+	font-style: italic;
+	font-size: large;
+}
+
+.margenProducto {
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+.margenFiltroXbox {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-inline-start: 0%;
+	margin-top: 2%;
+}
+.margenFiltroPs {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-inline-start: 0%;
+	margin-top: 2%;
+}
+.margenFiltroNintendo {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-inline-start: 0%;
+	margin-top: 2%;
+}
+
+.linkCuenta{
+    color: $colorCuentaCarro; 
+    text-decoration:none;
+} 
+.linkCarro{
+    color: $colorCuentaCarro; 
+    text-decoration:none;
+}
+
+/*APLICACION DE &*/
+.d-flex {
+	button {
+		&:hover {
+			background-color: darkgrey;
+		}
+	}
+}
+
+.pestanaPS {
+    background: rgb(230,225,244);
+    background: radial-gradient(circle, rgba(230,225,244,1) 0%, rgba(32,126,236,1) 100%);
+  }
+  .pestanaXbx {
+      background: rgb(169,237,214);
+      background: radial-gradient(circle, rgba(169,237,214,1) 0%, rgba(34,195,27,1) 100%);
+  }
+  .pestanaNtd {
+      background: rgb(231,149,149);
+      background: radial-gradient(circle, rgba(231,149,149,1) 0%, rgba(226,37,37,1) 100%);  
+  }
+
+/*Estilos del footer*/
+
+#colorLetra {
+    color: $colorLetraFooter;
+}
+
+.contact-link{
+    text-decoration: none;
+    color: $colorLetraFooter;
+}
+
+footer {
+    background: rgb(128,1,1);
+    background: $colorGradiente;
+    font-family: $estiloLetra1;
+    font-family: $estiloLetra2;
+    font-family: $estiloLetra3;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+    
