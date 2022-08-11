@@ -12,6 +12,7 @@ body {
   background-size: cover;
 }
 
+/*Anidacion*/
 nav div p {
   font-family: "Arima", cursive;
   font-family: "Bitter", serif;
@@ -212,15 +213,14 @@ aside {
 }
 
 /*MEDIAS*/
-@media screen and (min-width: 320px) and (max-width: 480px) and (min-width: 320px) and (max-width: 480px) {
+@media screen and (min-width: 320px) and (max-width: 480px) {
   #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
     grid-template-columns: auto;
     grid-template-rows: repeat 3, auto;
     justify-content: center;
     align-content: center;
     row-gap: 1%;
-    -moz-column-gap: 2%;
-         column-gap: 2%;
+    column-gap: 2%;
   }
   footer {
     display: flex;
@@ -234,7 +234,7 @@ aside {
     display: none;
   }
   #grillaProductos {
-    margin-bottom: 25%;
+    margin-bottom: 35%;
   }
   #juegosPs, #juegosXbox, #juegosNtd {
     margin-top: 35%;
@@ -257,8 +257,7 @@ aside {
     justify-content: center;
     align-content: center;
     row-gap: 1%;
-    -moz-column-gap: 2%;
-         column-gap: 2%;
+    column-gap: 2%;
     margin-top: 15%;
   }
   footer {
@@ -304,6 +303,4 @@ aside {
   .card:hover {
     transform: scale(1.2);
   }
-}
-
-/*# sourceMappingURL=styles.css.map */
+}/*# sourceMappingURL=styles.css.map */
