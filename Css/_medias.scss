@@ -1,5 +1,4 @@
 @media screen and (min-width: 320px) and (max-width: 480px) {
-    @media screen and (min-width: 320px) and (max-width: 480px) {
         #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {
             grid-template-columns: auto;
             grid-template-rows: repeat (3, auto);
@@ -23,7 +22,7 @@
         }
 
         #grillaProductos{
-            margin-bottom: 25%;
+            margin-bottom: 35%;
         }
 
         #juegosPs, #juegosXbox, #juegosNtd {
@@ -41,7 +40,7 @@
             width: 100%;
         }
 }
-}
+
 
 @media screen and (min-width: 481px) and (max-width: 1024px) {
 #juegosPs, #juegosXbox, #juegosNtd, #grillaProductos {

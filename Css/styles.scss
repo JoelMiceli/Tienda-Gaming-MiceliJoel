@@ -3,13 +3,6 @@
 
 @import "variables";
 
- /* GRID*/
- @import "grillas";
-   
- /*MEDIAS*/
- @import "medias";
- 
-
 * {
     margin: 0;
     padding: 0;
@@ -186,4 +179,9 @@ footer {
     flex-wrap: nowrap;
     justify-content: space-around;
 }
-    
+
+ /* GRID*/
+ @import "grillas";
+   
+ /*MEDIAS*/
+ @import "medias";
