@@ -29,8 +29,13 @@ nav {
 .barraCuotas {
     background: rgb(128,1,1);
     background: $colorGradiente;
+}
+
+/*EXTEND*/
+.barraCuotas--nueva {
+    @extend .barraCuotas;
     text-align: center;
-    color: $colorLetraFooter;
+    color: whitesmoke
 }
 
 .margenProducto {
@@ -81,54 +86,47 @@ h2 {
     margin-left: 11%;
 }
 
+/*MIXIN*/
+@mixin margins-border-fonts{
+	margin-top: 5%;
+	margin-inline: 10%;
+	border-radius: 2%;
+	font-style: italic;
+	font-size: large;
+}
 
 #formularioCuenta {
-	margin-top: 5%;
-	margin-inline: 10%;
-	border-radius: 2%;
-	font-style: italic;
-	font-size: large;
+    @include margins-border-fonts;
 }
+
 #formularioCarro {
-	margin-top: 5%;
-	margin-inline: 10%;
-	border-radius: 2%;
-	font-style: italic;
-	font-size: large;
+	@include margins-border-fonts;
 }
 #formularioCarroTarjeta {
-	margin-top: 5%;
-	margin-inline: 10%;
-	border-radius: 2%;
-	font-style: italic;
-	font-size: large;
+	@include margins-border-fonts;
+}
+
+@mixin propiedadesMargenes{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	margin-inline-start: 0%;
+	margin-top: 2%;
+}
+
+.margenFiltroXbox {
+	@include propiedadesMargenes;
+}
+.margenFiltroPs {
+	@include propiedadesMargenes;
+}
+.margenFiltroNintendo {
+	@include propiedadesMargenes;
 }
 
 .margenProducto {
     margin-top: 5%;
     margin-bottom: 5%;
-}
-
-.margenFiltroXbox {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-inline-start: 0%;
-	margin-top: 2%;
-}
-.margenFiltroPs {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-inline-start: 0%;
-	margin-top: 2%;
-}
-.margenFiltroNintendo {
-	display: flex;
-	flex-direction: column;
-	align-items: flex-start;
-	margin-inline-start: 0%;
-	margin-top: 2%;
 }
 
 .linkCuenta{
@@ -148,18 +146,25 @@ h2 {
 		}
 	}
 }
+/* MAP*/
+$coloresMenu:(
+playstation: radial-gradient(circle, rgb(230, 225, 244) 0%, rgb(32, 126, 236) 100%)
+xbox: radial-gradient(circle, rgb(169, 237, 214) 0%, rgb(34, 195, 27) 100%)
+nintendo: radial-gradient(circle, rgb(231, 149, 149) 0%, rgb(226, 37, 37) 100%)
+);
 
+/*MAP GET*/
 .pestanaPS {
     background: rgb(230,225,244);
-    background: radial-gradient(circle, rgba(230,225,244,1) 0%, rgba(32,126,236,1) 100%);
+    background: map-get($coloresMenu, playstation);
   }
   .pestanaXbx {
       background: rgb(169,237,214);
-      background: radial-gradient(circle, rgba(169,237,214,1) 0%, rgba(34,195,27,1) 100%);
+      background: map-get($coloresMenu, xbox);
   }
   .pestanaNtd {
       background: rgb(231,149,149);
-      background: radial-gradient(circle, rgba(231,149,149,1) 0%, rgba(226,37,37,1) 100%);  
+      background: map-get($coloresMenu, nintendo);  
   }
 
 /*Estilos del footer*/
